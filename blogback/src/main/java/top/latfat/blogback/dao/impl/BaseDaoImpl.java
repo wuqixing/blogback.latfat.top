@@ -13,7 +13,7 @@ import org.hibernate.SessionFactory;
 import top.latfat.blogback.dao.BaseDao;
   
 /**
- * BaseDaoImpl 定义DAO的通用操作的实现 
+ * BaseDaoImpl 
  * 
  * @author sean
  *
@@ -24,23 +24,14 @@ public class BaseDaoImpl<T> implements BaseDao<T> {
   
     private Class<T> clazz;  
   
-    /** 
-     * 通过构造方法指定DAO的具体实现类 
-     */  
     public BaseDaoImpl() {  
         ParameterizedType type = (ParameterizedType) this.getClass().getGenericSuperclass();  
         clazz = (Class<T>) type.getActualTypeArguments()[0];  
     }  
   
-    /** 
-     * 向DAO层注入SessionFactory 
-     */  
     @Resource  
     private SessionFactory sessionFactory;  
   
-    /** 
-     * 获取当前工作的Session 
-     */  
     protected Session getSession() {  
         return this.sessionFactory.getCurrentSession();  
     }  

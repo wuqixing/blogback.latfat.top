@@ -12,16 +12,13 @@ import top.latfat.blogback.entity.Result;
 import top.latfat.blogback.service.BaseService;
   
 /** 
- * BaseServiceImpl 定义Service的通用操作的实现 
+ * BaseServiceImpl 
  *  
  * @author sean 
  */  
 @Transactional
 public class BaseServiceImpl<T> implements BaseService<T> {  
       
-    /** 
-     * 注入BaseDao 
-     */  
 	@Resource  
     private BaseDao<T> dao;
 	

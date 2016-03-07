@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;  
   
 /** 
- * BaseDAO 定义DAO的通用操作 
+ * BaseDAO 
  *  
  * @author sean 
  */  

@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.List;  
   
 /** 
- * BaseService 定义Service的通用操作 
+ * BaseService 
  *  
  * @author sean 
  */  
